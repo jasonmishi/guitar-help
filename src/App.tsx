@@ -4,7 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const notes = ["A", "Ab", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+  const strings = ["1", "2", "3", "4", "5", "6"]
+  const randomNotes = notes.sort(() => Math.random() - 0.5)
+  const randomStrings = strings.sort(() => Math.random() - 0.5)
 
   return (
     <div className="App">
@@ -16,18 +19,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>{randomNotes.map((note) => (" " + note))}</h1>
+      <h2>{randomStrings.map((string) => (" " + string))}</h2>
     </div>
   )
 }
