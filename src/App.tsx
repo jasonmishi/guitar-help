@@ -5,6 +5,8 @@ import FretboardMemorizationExercise from './FretboardMemorizationExercise'
 
 
 function App() {
+  const notes = ["A", "Ab", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+  const randomNotes = notes.sort(() => Math.random() - 0.5)
 
   return (
     <div className="App">
@@ -16,7 +18,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <FretboardMemorizationExercise />
+      <FretboardMemorizationExercise notesInOrder={randomNotes} />
     </div>
   )
 }

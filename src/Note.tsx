@@ -7,7 +7,7 @@ interface NoteProps {
 
 function Note({ value, parentOnClick }: NoteProps) {
   return (
-    <div className="note" onClick={() => {parentOnClick()}}>{value}</div>
+    <button className="note" role='button' onClick={() => {parentOnClick()}}>{value}</button>
   )
 }
 
