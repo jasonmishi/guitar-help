@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './Note.css'
 
 interface NoteProps {
@@ -6,8 +7,19 @@ interface NoteProps {
 }
 
 function Note({ value, parentOnClick }: NoteProps) {
+  const [completionStatus, setCompletionStatus] = useState('todo');
+
   return (
-    <button className="note" role='button' onClick={() => {parentOnClick()}}>{value}</button>
+    <button
+      className={"note " + completionStatus}
+      role="button"
+      onClick={() => {
+        parentOnClick()
+        setCompletionStatus('complete')
+      }}
+    >
+      {value}
+    </button>
   )
 }
 
