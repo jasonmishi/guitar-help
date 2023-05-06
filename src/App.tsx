@@ -1,7 +1,6 @@
 import './App.css'
 import FretboardMemorizationExercise from './FretboardMemorizationExercise'
-import ChordChart from './ChordChart'
-import { Shape } from 'svguitar'
+import EssentialChordsCharts from './EssentailChordsCharts'
 
 
 function App() {
@@ -11,22 +10,7 @@ function App() {
   return (
     <div className="App">
       <FretboardMemorizationExercise notesInOrder={randomNotes} />
-      <ChordChart chord={{
-            // array of [string, fret, text | options]
-            fingers: [
-              // finger at string 1, fret 2, with text '2'
-              [1, 2, '2'],
-
-              // finger at string 2, fret 3, with text '3', colored red and has class '.red'
-              [2, 3, { text: '3', color: '#F00', className: 'red' }],
-
-              // finger is triangle shaped
-              [3, 3, { shape: Shape.TRIANGLE }],
-              [6, 'x'],
-            ],
-            barres: []
-          }
-        }/>
+      <EssentialChordsCharts rootstring="1" type='major'/>
     </div>
   )
 }
