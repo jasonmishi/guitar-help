@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { SVGuitarChord, Chord } from 'svguitar'
+import { SVGuitarChord, Chord, ChordStyle, Orientation, FretLabelPosition } from 'svguitar'
 
 function ChordChart({chord} : {chord: Chord}) {
     useEffect(() => {
@@ -13,12 +13,12 @@ function ChordChart({chord} : {chord: Chord}) {
           /**
            * Orientation of the chord diagram. Chose between 'vertical' or 'horizontal'
            */
-          orientation: 'vertical',
+          orientation: Orientation.vertical,
   
           /**
            * Select between 'normal' and 'handdrawn'
            */
-          style: 'normal',
+          style: ChordStyle.normal,
   
           /**
            * The number of strings
@@ -43,7 +43,7 @@ function ChordChart({chord} : {chord: Chord}) {
           /**
            * The position of the fret label (eg. "3fr")
            */
-          fretLabelPosition: 'right',
+          fretLabelPosition: FretLabelPosition.LEFT,
   
           /**
            * The font size of the fret label
