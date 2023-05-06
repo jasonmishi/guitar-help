@@ -3,7 +3,7 @@ import './Note.css'
 
 interface NoteProps {
   value: string,
-  parentOnClick: Function
+  parentOnClick: () => void
 }
 
 function Note({ value, parentOnClick }: NoteProps) {

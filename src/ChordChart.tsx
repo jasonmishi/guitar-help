@@ -3,7 +3,7 @@ import { SVGuitarChord, Chord, ChordStyle, Orientation, FretLabelPosition } from
 
 function ChordChart({chord} : {chord: Chord}) {
     useEffect(() => {
-        let chart = new SVGuitarChord('.chord-chart')
+        const chart = new SVGuitarChord('.chord-chart')
         .chord(
           chord
         )
