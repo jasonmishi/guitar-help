@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import {majorChords} from './major-chords'
+import {majorChords} from '../data/major-chords'
 import ChordChart from './ChordChart'
 
 function EssentialChordsCharts({rootstring, type} : {rootstring: "1" | "2", type: "major"}) {

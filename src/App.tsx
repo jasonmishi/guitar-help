@@ -1,6 +1,6 @@
 import './App.css'
-import FretboardMemorizationExercise from './FretboardMemorizationExercise'
-import EssentialChordsCharts from './EssentailChordsCharts'
+import FretboardMemorizationExercise from './components/FretboardMemorizationExercise'
+import EssentialChordsCharts from './components/EssentailChordsCharts'
 
 
 function App() {
