@@ -1,6 +1,11 @@
 import { useState } from 'react'
 
-function StringButton({ value, parentOnClick }: { value: GuitarString, parentOnClick: (rootString: GuitarString, chordType: string) => void}) {
+interface StringButtonProps {
+  value: GuitarString,
+  parentOnClick: (rootString: GuitarString, chordType: string) => void
+}
+
+function StringButton({ value, parentOnClick }: StringButtonProps) {
   const [completionStatus, setCompletionStatus] = useState('todo');
 
   return (
