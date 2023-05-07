@@ -10,7 +10,7 @@ interface Strings {
   "6": Chord[],
 }
 
-export const majorChords: Record<keyof Strings, Chord[]> = {
+export const essentailMajorChords: Record<keyof Strings, Chord[]> = {
   1: [
     {
       // array of [string, fret, text | options]

@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import {majorChords} from '../data/major-chords'
+import {essentailMajorChords} from '../data/essential-major-chords'
 import ChordChart from './ChordChart'
 
 function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, type: "major"}) {
@@ -7,7 +7,7 @@ function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, t
 
   const chordCharts: ReactElement[] = []
   if (type === "major") {
-    majorChords[rootstring].forEach((chord) => {
+    essentailMajorChords[rootstring].forEach((chord) => {
       chordCharts.push(<ChordChart chord={chord} />)
     })
   }
