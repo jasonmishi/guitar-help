@@ -1,6 +1,5 @@
 import './App.css'
 import FretboardMemorizationExercise from './components/FretboardMemorizationExercise'
-import EssentialChordsCharts from './components/EssentailChordsCharts'
 
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <FretboardMemorizationExercise notesInOrder={randomNotes} />
-      <EssentialChordsCharts rootstring="1" type='major'/>
     </div>
   )
 }

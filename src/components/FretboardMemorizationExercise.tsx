@@ -1,6 +1,7 @@
 import { ReactElement, useState } from 'react'
 import Note from './Note'
 import String from './String'
+import EssentialChordsCharts from './EssentailChordsCharts'
 
 interface FretboardMemorizationExerciseProps {
   notesInOrder: string[]
@@ -35,6 +36,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
       <h2>
         {stringsComponents}
       </h2>
+      <EssentialChordsCharts rootstring="1" type='major'/>
     </>
   )
 }
