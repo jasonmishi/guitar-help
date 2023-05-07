@@ -15,23 +15,32 @@ export const majorChords: Record<keyof Strings, Chord[]> = {
     {
       // array of [string, fret, text | options]
       fingers: [
-        [1, 2, '2'],
-
-        [2, 3, { text: '3', color: '#F00', className: 'red' }],
-
-        [3, 3, { shape: Shape.TRIANGLE }],
-        [6, 'x'],
+        [1, 1],
+        [2, 1, { shape: Shape.PENTAGON }],
+        [3, 2],
+        [4, 3, { shape: Shape.PENTAGON }],
+        [5, 3],
+        [6, 1, { shape: Shape.PENTAGON }],
       ],
       barres: []
     },
     {
       fingers: [
-        [1, 2, { shape: Shape.TRIANGLE }],
-
-        [2, 3, { text: '3', color: '#F00', className: 'red', shape: Shape.TRIANGLE }],
-
-        [3, 3, { shape: Shape.TRIANGLE }],
-        [6, 'x'],
+        [1, 1],
+        [2, 1],
+        [3, 2],
+        [4, 3, { shape: Shape.PENTAGON }],
+        [5, 3, { shape: Shape.PENTAGON }],
+        [6, 1, { shape: Shape.PENTAGON }],
+      ],
+      barres: []
+    },
+    {
+      fingers: [
+        [1, 2],
+        [2, 2],
+        [3, 3, { shape: Shape.PENTAGON }],
+        [5, 1],
       ],
       barres: []
     }
