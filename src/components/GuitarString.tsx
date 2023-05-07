@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function String({ value, parentOnClick }: { value: GuitarString, parentOnClick: (rootString: GuitarString, chordType: string) => void}) {
+function StringButton({ value, parentOnClick }: { value: GuitarString, parentOnClick: (rootString: GuitarString, chordType: string) => void}) {
   const [completionStatus, setCompletionStatus] = useState('todo');
 
   return (
@@ -17,4 +17,4 @@ function String({ value, parentOnClick }: { value: GuitarString, parentOnClick: 
   )
 }
 
-export default String
+export default StringButton

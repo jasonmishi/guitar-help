@@ -1,6 +1,6 @@
 import { ReactElement, useState } from 'react'
 import Note from './Note'
-import String from './String'
+import StringButton from './GuitarString'
 import EssentialChordsCharts from './EssentailChordsCharts'
 
 interface FretboardMemorizationExerciseProps {
@@ -35,8 +35,10 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
   }
 
   const stringsComponents: ReactElement[] = []
-  randomStrings.forEach((string) => {
-    stringsComponents.push(<String key={string} value={string} parentOnClick={showChords} />)
+  randomStrings.forEach((guitarString) => {
+    stringsComponents.push(
+      <StringButton key={guitarString} value={guitarString} parentOnClick={showChords} />
+    )
   })
 
   return (
