@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 import {majorChords} from '../data/major-chords'
 import ChordChart from './ChordChart'
 
-function EssentialChordsCharts({rootstring, type} : {rootstring: "1" | "2", type: "major"}) {
+function EssentialChordsCharts({rootstring, type} : {rootstring: "1" | "2" | "3" | "4" | "5" | "6", type: "major"}) {
   // TODO: Maybe consider a databse here
 
   const chordCharts: ReactElement[] = []

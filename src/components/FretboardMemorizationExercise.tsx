@@ -8,10 +8,21 @@ interface FretboardMemorizationExerciseProps {
 }
 
 function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationExerciseProps) {
-  const [randomStrings, setRandomStrings] = useState(["1", "2", "3", "4", "5", "6"].sort(() => Math.random() - 0.5))
+  type ArrayOfStrings = ('1'| '2'| '3'| '4'| '5'| '6')[];
+
+  const shuffleArray = (array: ArrayOfStrings): ArrayOfStrings => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    return array;
+  }
+
+  const [randomStrings, setRandomStrings] = useState<ArrayOfStrings>(shuffleArray(["1", "2", "3", "4", "5", "6"]))
 
   const randomizeStrings = () => {
-    setRandomStrings([...randomStrings.sort(() => Math.random() - 0.5)])
+    setRandomStrings(shuffleArray(randomStrings))
   }
 
   const notesComponents: ReactElement[] = []
@@ -19,14 +30,15 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
     notesComponents.push(<Note key={note} value={note} parentOnClick={randomizeStrings} />)
   })
 
-  const stringsComponents: ReactElement[] = []
-  randomStrings.forEach((note) => {
-    stringsComponents.push(<String key={note} value={note} parentOnClick={randomizeStrings} />)
-  })
-
-  const showChords = () => {
-
+  const [chosenString, chooseString] = useState(randomStrings[0])
+  const showChords = (rootString: "1" | "2" | "3" | "4" | "5" | "6", chordType="major") => {
+    chooseString(rootString)
   }
+
+  const stringsComponents: ReactElement[] = []
+  randomStrings.forEach((string) => {
+    stringsComponents.push(<String key={string} value={string} parentOnClick={showChords} />)
+  })
 
   return (
     <>
@@ -36,7 +48,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
       <h2>
         {stringsComponents}
       </h2>
-      <EssentialChordsCharts rootstring="1" type='major'/>
+      <EssentialChordsCharts rootstring={chosenString} type='major'/>
     </>
   )
 }
