@@ -9,6 +9,7 @@ interface FretboardMemorizationExerciseProps {
 
 function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationExerciseProps) {
 
+  // Durstenfeld shuffle
   const shuffleArray = (array: GuitarStringArray): GuitarStringArray => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -21,7 +22,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
   const [randomStrings, setRandomStrings] = useState<GuitarStringArray>(shuffleArray(["1", "2", "3", "4", "5", "6"]))
 
   const randomizeStrings = () => {
-    setRandomStrings(shuffleArray(randomStrings))
+    setRandomStrings([...shuffleArray(randomStrings)])
   }
 
   const notesComponents: ReactElement[] = []
