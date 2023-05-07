@@ -8,9 +8,8 @@ interface FretboardMemorizationExerciseProps {
 }
 
 function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationExerciseProps) {
-  type ArrayOfStrings = ('1'| '2'| '3'| '4'| '5'| '6')[];
 
-  const shuffleArray = (array: ArrayOfStrings): ArrayOfStrings => {
+  const shuffleArray = (array: GuitarStringArray): GuitarStringArray => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -19,7 +18,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
     return array;
   }
 
-  const [randomStrings, setRandomStrings] = useState<ArrayOfStrings>(shuffleArray(["1", "2", "3", "4", "5", "6"]))
+  const [randomStrings, setRandomStrings] = useState<GuitarStringArray>(shuffleArray(["1", "2", "3", "4", "5", "6"]))
 
   const randomizeStrings = () => {
     setRandomStrings(shuffleArray(randomStrings))
@@ -31,7 +30,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
   })
 
   const [chosenString, chooseString] = useState(randomStrings[0])
-  const showChords = (rootString: "1" | "2" | "3" | "4" | "5" | "6", chordType="major") => {
+  const showChords = (rootString: GuitarString, chordType="major") => {
     chooseString(rootString)
   }
 

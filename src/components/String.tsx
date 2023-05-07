@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function String({ value, parentOnClick }: { value: "1" | "2" | "3" | "4" | "5" | "6", parentOnClick: (rootString: "1" | "2" | "3" | "4" | "5" | "6", chordType: string) => void}) {
+function String({ value, parentOnClick }: { value: GuitarString, parentOnClick: (rootString: GuitarString, chordType: string) => void}) {
   const [completionStatus, setCompletionStatus] = useState('todo');
 
   return (
