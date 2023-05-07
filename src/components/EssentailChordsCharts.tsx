@@ -6,9 +6,11 @@ function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, t
   // TODO: Maybe consider a databse here
 
   const chordCharts: ReactElement[] = []
+  let count: number = 0;
   if (type === "major") {
     essentailMajorChords[rootstring].forEach((chord) => {
-      chordCharts.push(<ChordChart chord={chord} />)
+      count++;
+      chordCharts.push(<ChordChart key={count.toString()} chord={chord} />)
     })
   }
   
