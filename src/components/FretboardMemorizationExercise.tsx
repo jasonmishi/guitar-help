@@ -30,7 +30,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
   })
 
   const [chosenString, chooseString] = useState(randomStrings[0])
-  const showChords = (rootString: GuitarString, chordType="major") => {
+  const showChords = (rootString: GuitarString) => {
     chooseString(rootString)
   }
 
