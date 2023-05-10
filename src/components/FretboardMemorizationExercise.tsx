@@ -30,10 +30,12 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
     notesComponents.push(<Note key={note} value={note} parentOnClick={randomizeStrings} />)
   })
 
-  const [chosenString, chooseString] = useState(randomStrings[0])
+  const [chosenString, chooseString]= useState<null | GuitarString>(null)
   const showChords = (rootString: GuitarString) => {
     chooseString(rootString)
   }
+
+  const chordCharts = chosenString == null ? "" : <EssentialChordsCharts rootstring={chosenString} type='major'/>;
 
   const stringsComponents: ReactElement[] = []
   randomStrings.forEach((guitarString) => {
@@ -50,7 +52,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
       <h2>
         {stringsComponents}
       </h2>
-      <EssentialChordsCharts rootstring={chosenString} type='major'/>
+      {chordCharts}
     </>
   )
 }
