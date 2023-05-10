@@ -15,7 +15,7 @@ function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, t
   }
   
   return (
-    <div>
+    <div className='chord-charts'>
       {chordCharts}
     </div>
   )
