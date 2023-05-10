@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import {essentailMajorChords} from '../data/essential-major-chords'
 import ChordChart from './ChordChart'
+import './ChordCharts.css'
 
 function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, type: "major"}) {
   // TODO: Maybe consider a databse here
