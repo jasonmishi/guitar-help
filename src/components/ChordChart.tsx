@@ -1,9 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { SVGuitarChord, Chord, } from 'svguitar'
 
 function ChordChart({ chord }: { chord: Chord }) {
+  const ref = useRef(null);
   useEffect(() => {
-    const chart = new SVGuitarChord('.chord-chart')
+    if (!ref.current) return;
+    const chart = new SVGuitarChord(ref.current)
       .chord(
         chord
       )
@@ -18,7 +20,7 @@ function ChordChart({ chord }: { chord: Chord }) {
 
   return (
     <>
-      <div className="chord-chart"></div>
+      <div ref={ref} className={"chord-chart"}></div>
     </>
   )
 }
