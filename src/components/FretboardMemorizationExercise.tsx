@@ -19,7 +19,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
     return array;
   }
 
-  const [randomStrings, setRandomStrings] = useState<GuitarStringArray>(shuffleArray(["1", "2", "3", "4", "5", "6"]))
+  const [randomStrings, setRandomStrings] = useState<GuitarStringArray>(shuffleArray([1, 2, 3, 4, 5, 6]))
 
   const randomizeStrings = () => {
     setRandomStrings([...shuffleArray(randomStrings)])
