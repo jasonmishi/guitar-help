@@ -1,5 +1,22 @@
 import { useEffect, useRef } from 'react';
-import { SVGuitarChord, Chord, } from 'svguitar'
+import { SVGuitarChord, Shape } from 'svguitar'
+import { Chord as SVGChord } from 'svguitar';
+
+function chordToSVGuitarChord(chord: Chord): SVGChord {
+  let svgChord: SVGChord = {
+    fingers: [],
+    barres: []
+  };
+
+  chord.fingers.forEach(finger => {
+    svgChord.fingers.push(finger);
+    if (finger.length >= 3) {
+      svgChord.fingers[svgChord.fingers.length - 1][2] = {shape : Shape.PENTAGON};
+    }
+  })
+
+  return svgChord;
+}
 
 function ChordChart({ chord }: { chord: Chord }) {
   const ref = useRef(null);
@@ -7,7 +24,7 @@ function ChordChart({ chord }: { chord: Chord }) {
     if (!ref.current) return;
     const chart = new SVGuitarChord(ref.current)
       .chord(
-        chord
+        chordToSVGuitarChord(chord)
       )
       .configure({
         color: '#888',
