@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { SVGuitarChord, Shape, Chord as SVGChord } from 'svguitar'
 
 function chordToSVGuitarChord(chord: Chord): SVGChord {
-  let svgChord: SVGChord = {
+  const svgChord: SVGChord = {
     fingers: [],
     barres: []
   };
