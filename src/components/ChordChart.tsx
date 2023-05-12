@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { SVGuitarChord, Shape, Chord as SVGChord } from 'svguitar'
+import { SVGuitarChord, Shape, Chord as SVGChord, Finger } from 'svguitar'
 
 function chordToSVGuitarChord(chord: Chord): SVGChord {
   let svgChord: SVGChord = {
@@ -8,8 +8,12 @@ function chordToSVGuitarChord(chord: Chord): SVGChord {
   };
 
   chord.fingers.forEach(finger => {
-    svgChord.fingers.push(finger);
-    if (finger.length >= 3) {
+    const string = finger[0];
+    const fret = finger[1];
+    const optional = finger[2];
+
+    svgChord.fingers.push([string, fret]);
+    if (optional) {
       svgChord.fingers[svgChord.fingers.length - 1][2] = {shape : Shape.PENTAGON};
     }
   })
