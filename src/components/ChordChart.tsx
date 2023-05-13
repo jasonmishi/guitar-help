@@ -14,7 +14,7 @@ function chordToSVGuitarChord(chord: Chord): SVGChord {
 
     svgChord.fingers.push([string, fret]);
     if (optional) {
-      svgChord.fingers[svgChord.fingers.length - 1][2] = {shape : Shape.PENTAGON};
+      svgChord.fingers[svgChord.fingers.length - 1][2] = {shape : Shape.PENTAGON, color: "#111"};
     }
   })
 
