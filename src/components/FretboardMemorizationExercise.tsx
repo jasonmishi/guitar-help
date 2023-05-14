@@ -39,8 +39,9 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
 
   const stringsComponents: ReactElement[] = []
   randomStrings.forEach((guitarString) => {
+    const active = guitarString === chosenString ? "active" : "";
     stringsComponents.push(
-      <StringButton key={guitarString} value={guitarString} parentOnClick={showChords} />
+      <StringButton key={guitarString} status={active} value={guitarString} parentOnClick={showChords} />
     )
   })
 

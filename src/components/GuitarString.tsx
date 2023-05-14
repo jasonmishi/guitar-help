@@ -1,20 +1,19 @@
-import { useState } from 'react'
+import './GuitarString.css'
 
 interface StringButtonProps {
   value: GuitarString,
+  status: "active" | "",
   parentOnClick: (rootString: GuitarString) => void
 }
 
-function StringButton({ value, parentOnClick }: StringButtonProps) {
-  const [completionStatus, setCompletionStatus] = useState('todo');
+function StringButton({ value, parentOnClick, status }: StringButtonProps) {
 
   return (
     <button
-      className={"string " + completionStatus}
+      className={"string " + status}
       role="button"
       onClick={() => {
         parentOnClick(value)
-        setCompletionStatus('complete')
       }}
     >
       {value}
