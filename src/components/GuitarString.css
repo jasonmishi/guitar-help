@@ -1,5 +1,8 @@
 .string {
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+
   &.active {
-    color: green;
+    color: orange;
   }
 }
