@@ -27,12 +27,18 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
 
   const notesComponents: ReactElement[] = []
   notesInOrder.forEach((note) => {
-    notesComponents.push(<Note key={note} value={note} parentOnClick={
-      () => {
-        randomizeStrings()
-        chooseString(null)
-      }
-    } />)
+    notesComponents.push(
+      <Note 
+        key={note} 
+        value={note} 
+        parentOnClick={
+          () => {
+            randomizeStrings()
+            chooseString(null)
+          }
+        } 
+      />
+    )
   })
 
   const [chosenString, chooseString]= useState<null | GuitarString>(null)
