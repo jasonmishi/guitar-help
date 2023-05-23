@@ -1,4 +1,5 @@
 import { ReactElement, useState } from 'react'
+import ChordTypeSelect from './ChordTypeSelect'
 import Note from './Note'
 import StringButton from './GuitarString'
 import EssentialChordsCharts from './EssentailChordsCharts'
@@ -58,6 +59,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
 
   return (
     <>
+      <ChordTypeSelect />
       <h1>
         {notesComponents}
       </h1>
