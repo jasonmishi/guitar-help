@@ -1,4 +1,8 @@
-function ChordTypeSelect() {
+interface ChordTypeSelectProps {
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void
+}
+
+function ChordTypeSelect({onChange}: ChordTypeSelectProps) {
 
   return (
     <select name="chord-type" id="chord-type">
