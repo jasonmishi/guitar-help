@@ -47,7 +47,9 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
     chooseString(rootString)
   }
 
-  const chordCharts = chosenString == null ? "" : <EssentialChordsCharts rootstring={chosenString} type='major'/>;
+  const [chordType, chooseChordType] = useState<ChordType>("major");
+
+  const chordCharts = chosenString == null ? "" : <EssentialChordsCharts rootstring={chosenString} type={chordType}/>;
 
   const stringsComponents: ReactElement[] = []
   randomStrings.forEach((guitarString) => {
