@@ -3,7 +3,7 @@ import {essentailMajorChords} from '../data/essential-major-chords'
 import ChordChart from './ChordChart'
 import './ChordCharts.css'
 
-function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, type: "major"}) {
+function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, type: ChordType}) {
   // TODO: Maybe consider a databse here
 
   const chordCharts: ReactElement[] = []

@@ -5,3 +5,5 @@ type Chord = {
   fingers: [GuitarString, number, {optional: boolean}?][],
   barres: []
 };
+
+type ChordType = "major" | "minor"
