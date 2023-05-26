@@ -7,7 +7,7 @@ interface Strings {
   "6": Chord[],
 }
 
-export const essentailMajorChords: Record<keyof Strings, Chord[]> = {
+export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
   1: [],
   2: [],
   3: [],
