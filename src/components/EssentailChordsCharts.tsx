@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 import {essentailMajorChords} from '../data/essential-major-chords'
+import {essentialMinorChords} from '../data/essential-minor-chords'
 import ChordChart from './ChordChart'
 import './ChordCharts.css'
 
@@ -10,6 +11,11 @@ function EssentialChordsCharts({rootstring, type} : {rootstring: GuitarString, t
   let count = 0;
   if (type === "major") {
     essentailMajorChords[rootstring].forEach((chord) => {
+      count++;
+      chordCharts.push(<ChordChart key={count.toString()} chord={chord} />)
+    })
+  } else if (type === "minor") {
+    essentialMinorChords[rootstring].forEach((chord) => {
       count++;
       chordCharts.push(<ChordChart key={count.toString()} chord={chord} />)
     })
