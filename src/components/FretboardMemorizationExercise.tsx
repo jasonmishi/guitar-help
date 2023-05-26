@@ -61,7 +61,7 @@ function FretboardMemorizationExercise({ notesInOrder }: FretboardMemorizationEx
 
   return (
     <>
-      <ChordTypeSelect />
+      <ChordTypeSelect onChange={(chordType) => {chooseChordType(chordType)}}/>
       <h1>
         {notesComponents}
       </h1>

@@ -1,13 +1,22 @@
 interface ChordTypeSelectProps {
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void
+  onChange: (event: ChordType) => void
 }
 
 function ChordTypeSelect({onChange}: ChordTypeSelectProps) {
 
+  const chordTypes: ChordType[] = ["major", "minor"]
+
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    onChange(chordTypes[event.target.selectedIndex])
+  }
+
   return (
-    <select name="chord-type" id="chord-type" onChange={onChange}>
-      <option value="major">Major</option>
-      <option value="minor">Minor</option>
+    <select name="chord-type" id="chord-type" onChange={handleChange}>
+      {
+        chordTypes.map((chordType) => (
+          <option value={chordType}>{chordType}</option>
+        ))
+      }
     </select>
   )
 }
