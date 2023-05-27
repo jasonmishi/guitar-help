@@ -14,7 +14,7 @@ function ChordTypeSelect({onChange}: ChordTypeSelectProps) {
     <select name="chord-type" id="chord-type" onChange={handleChange}>
       {
         chordTypes.map((chordType) => (
-          <option value={chordType}>{chordType}</option>
+          <option key={chordType} value={chordType}>{chordType}</option>
         ))
       }
     </select>
