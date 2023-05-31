@@ -19,7 +19,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3],
         [6, 1, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -30,7 +29,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3, { optional: true }],
         [6, 1, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -39,7 +37,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [3, 3, { optional: true }],
         [5, 1],
       ],
-      barres: []
     }
   ],
   2: [
@@ -54,7 +51,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [6, 1, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -67,7 +63,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [6, 1, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -79,7 +74,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 4, { optional: true }],
         [6, 1],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -90,7 +84,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 4, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -100,7 +93,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3, { optional: true }],
         [6, 3],
       ],
-      barres: []
     },
   ],
   3: [
@@ -115,7 +107,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -126,7 +117,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -137,7 +127,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -148,7 +137,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 1, { optional: true }],
         [6, 1, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -158,7 +146,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 2, { optional: true }],
         [6, 2],
       ],
-      barres: []
     },
   ],
   4: [
@@ -172,7 +159,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3, { optional: true }],
         [6, 1, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -183,7 +169,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3],
         [6, 1, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -194,7 +179,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 1, { optional: true }],
         [6, 3, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -205,7 +189,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 1, { optional: true }],
         [6, 3],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -216,7 +199,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 1],
         [6, 3],
       ],
-      barres: []
     },
   ],
   5: [
@@ -230,7 +212,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 1],
         [6, 1, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -241,7 +222,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 4],
         [6, 4],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -252,7 +232,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 4],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -262,7 +241,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [4, 3, { optional: true }],
         [5, 4],
       ],
-      barres: []
     },
   ],
   6: [
@@ -277,7 +255,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3],
         [6, 4],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -288,7 +265,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3, { optional: true }],
         [6, 4],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -297,7 +273,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3, { optional: true }],
         [6, 4],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -308,7 +283,6 @@ export const essentialMajorChords: Record<keyof Strings, Chord[]> = {
         [5, 3],
         [6, 1],
       ],
-      barres: []
     },
   ]
 } 
