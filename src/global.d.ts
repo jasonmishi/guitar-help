@@ -3,7 +3,7 @@ type GuitarStringArray = GuitarString[];
 
 type Chord = {
   fingers: [GuitarString, number, {optional: boolean}?][],
-  barres: []
+  barres?: []
 };
 
 type ChordType = "major" | "minor"
