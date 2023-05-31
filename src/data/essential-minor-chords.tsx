@@ -19,7 +19,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [5, 2, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -28,7 +27,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [3, 3, { optional: true }],
         [5, 1],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -40,7 +38,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [6, 1, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -51,7 +48,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [5, 3],
         [6, 1, { optional: true }],
       ],
-      barres: []
     },
   ],
   2: [
@@ -65,7 +61,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [5, 1, { optional: true }],
         [6, 2, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -77,7 +72,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [5, 5, { optional: true }],
         [6, 1],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -86,7 +80,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [4, 4],
         [5, 1],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -97,7 +90,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [5, 4, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -108,7 +100,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [5, 4, { optional: true }],
         [6, 4],
       ],
-      barres: []
     },
     {
       fingers: [
@@ -119,7 +110,6 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
         [5, 4, { optional: true }],
         [6, 4, { optional: true }],
       ],
-      barres: []
     },
   ],
   3: [],
