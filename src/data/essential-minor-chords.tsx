@@ -112,7 +112,77 @@ export const essentialMinorChords: Record<keyof Strings, Chord[]> = {
       ],
     },
   ],
-  3: [],
+  3: [
+    {
+      fingers: [
+        [1, 4, { optional: true }],
+        [2, 4, { optional: true }],
+        [3, 1],
+        [4, 1],
+        [5, 2],
+        [6, 4, { optional: true }],
+      ],
+    },
+    {
+      fingers: [
+        [1, 4, { optional: true }],
+        [2, 4],
+        [3, 1],
+        [4, 1, { optional: true }],
+        [5, 2],
+        [6, 4, { optional: true }],
+      ],
+    },
+    {
+      fingers: [
+        [3, 5],
+        [4, 1],
+        [5, 3, { optional: true }],
+        [6, 3],
+      ],
+    },
+    {
+      fingers: [
+        [1, 1, { optional: true }],
+        [2, 2, { optional: true }],
+        [3, 3],
+        [4, 3, { optional: true }],
+        [5, 4],
+        [6, 1],
+      ],
+    },
+    {
+      fingers: [
+        [1, 1],
+        [2, 2],
+        [3, 3],
+        [4, 3, { optional: true }],
+        [5, 1, { optional: true }],
+        [5, 4, { optional: true }],
+        [6, 1, { optional: true }],
+      ],
+    },
+    {
+      fingers: [
+        [1, 1, { optional: true }],
+        [2, 2],
+        [3, 3],
+        [4, 3],
+        [5, 1, { optional: true }],
+        [5, 4, { optional: true }],
+        [6, 1, { optional: true }],
+      ],
+    },
+    {
+      fingers: [
+        [1, 1],
+        [2, 2, { optional: true }],
+        [3, 3],
+        [5, 4],
+        [6, 1, { optional: true }],
+      ],
+    },
+  ],
   4: [],
   5: [],
   6: [
