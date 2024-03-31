@@ -1,5 +1,6 @@
 import './App.css'
 import FretboardMemorizationExercise from './components/FretboardMemorizationExercise'
+import FiveAreasMemorization from './components/FiveAreasMemorization'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <FretboardMemorizationExercise notesInOrder={randomNotes} />
+      <FiveAreasMemorization />
     </div>
   )
 }
