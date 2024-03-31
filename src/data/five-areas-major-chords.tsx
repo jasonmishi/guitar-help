@@ -1,4 +1,5 @@
 // TODO: Add root notes
+// TODO: Add Fret positions
 export const fiveAreasMajorChords:  Chord[] = [
     {
       // array of [string, fret, text | options]
