@@ -3,7 +3,6 @@ import {fiveAreasMajorChords} from '../../data/five-areas/five-areas-major-chord
 import { fiveAreasMinorChords } from '../../data/five-areas/five-areas-minor-chords'
 import { fiveAreasDom7Chords } from '../../data/five-areas/five-areas-dom7-chords'
 import ChordChart from '../ChordChart'
-import './ChordCharts.css'
 
 function EssentialChordsCharts({type} : {type: ChordType}) {
   const chordCharts: ReactElement[] = []
