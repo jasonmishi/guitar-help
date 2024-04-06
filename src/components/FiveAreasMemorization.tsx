@@ -9,6 +9,9 @@ function FiveAreasMemorization(){
 
         <h2>Minor</h2>
         <FiveAreasChordCharts type="minor"/>
+
+        <h2>Dominant 7<sup>th</sup></h2>
+        <FiveAreasChordCharts type="dom7"/>
       </div>
     )
 }

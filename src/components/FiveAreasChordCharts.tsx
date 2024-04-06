@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import {fiveAreasMajorChords} from '../data/five-areas-major-chords'
 import { fiveAreasMinorChords } from '../data/five-areas-minor-chords'
+import { fiveAreasDom7Chords } from '../data/five-areas-dom7-chords'
 import ChordChart from './ChordChart'
 import './ChordCharts.css'
 
@@ -14,6 +15,11 @@ function EssentialChordsCharts({type} : {type: ChordType}) {
     })
   } else if (type === "minor") {
     fiveAreasMinorChords.forEach((chord) => {
+      count++;
+      chordCharts.push(<ChordChart key={count.toString()} chord={chord} />)
+    })
+  } else if (type === "dom7") {
+    fiveAreasDom7Chords.forEach((chord) => {
       count++;
       chordCharts.push(<ChordChart key={count.toString()} chord={chord} />)
     })
