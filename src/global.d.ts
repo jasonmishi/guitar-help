@@ -6,4 +6,4 @@ type Chord = {
   barres?: []
 };
 
-type ChordType = "major" | "minor"
+type ChordType = "major" | "minor" | "dom7"

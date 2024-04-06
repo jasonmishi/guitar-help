@@ -1,8 +1,8 @@
 import { ReactElement } from 'react'
-import {fiveAreasMajorChords} from '../data/five-areas/five-areas-major-chords'
-import { fiveAreasMinorChords } from '../data/five-areas/five-areas-minor-chords'
-import { fiveAreasDom7Chords } from '../data/five-areas/five-areas-dom7-chords'
-import ChordChart from './ChordChart'
+import {fiveAreasMajorChords} from '../../data/five-areas/five-areas-major-chords'
+import { fiveAreasMinorChords } from '../../data/five-areas/five-areas-minor-chords'
+import { fiveAreasDom7Chords } from '../../data/five-areas/five-areas-dom7-chords'
+import ChordChart from '../ChordChart'
 import './ChordCharts.css'
 
 function EssentialChordsCharts({type} : {type: ChordType}) {
