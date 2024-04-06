@@ -1,6 +1,6 @@
 import './App.css'
 import FretboardMemorizationExercise from './components/FretboardMemorizationExercise'
-import FiveAreasMemorization from './components/FiveAreasMemorization'
+import FiveAreasMemorization from './components/FiveAreas/FiveAreasMemorization'
 
 
 function App() {
